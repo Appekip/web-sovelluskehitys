@@ -1,0 +1,20 @@
+h1{
+    color: brown;
+}
+img {
+    border: 2px solid aqua;
+}
+div {
+    border: 1px solid black;
+    position: center;
+    text-align: center;
+}
+div.blue{
+    background-color: #0b77b7;
+}
+div.ligthyellow{
+    background-color: #E0F2BE;
+}
+div.red{
+    background-color: #b83f45;
+}
