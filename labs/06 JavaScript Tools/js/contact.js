@@ -12,6 +12,7 @@ function process() {
     // Get form references:
     var email = document.getElementById('email');
     var comments = document.getElementById('comments');
+    var name = document.getElementById('fullname').value;
     // Validate the email address:
     if (!email || !email.value 
     || (email.value.length < 6) 
@@ -20,6 +21,23 @@ function process() {
         alert('Please enter a valid email address!');
     }
 
+
+
+    alert("Name on: " + name);
+    if (name.length >= 3 && name.length <= 100){
+        var values = name.split(' ').filter(function(v){return v!==''});
+        if (values.length > 1) {
+            okay = true;
+        } else {
+            alert("Name has to be separated into first name and surname!")
+            okay = false;
+        }
+    }
+    else
+    {
+        alert('Name has to be between 3 and 100 characters long');
+        okay = false;
+    }
     // Validate the comments:
     var maxLength = 100;
     if (!comments || !comments.value 

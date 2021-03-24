@@ -3,12 +3,17 @@
 		"node": false,
 		"jasmine": true
 	   },
-	"parserOptions": {
-        "ecmaVersion": 6,    
-    },
 	"rules": {
 		"indent": [2, "tab"],
 		"quotes": [2, "single"],
 	    "semi": [2, "always", { "omitLastInOneLineBlock": true}]
-    }
+    },
+	"parserOptions": {
+        "ecmaVersion": 6
+    },
+
+	"globals": {
+		"console": false,
+		"document": false
+	}
 }

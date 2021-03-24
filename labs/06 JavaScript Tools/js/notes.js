@@ -1,14 +1,20 @@
-
+"use strict";
 var notes = new Array();
 
 function addItem() {
-	textbox = document.getElementById('item');
-	var itemText = textbox.value;
-	textbox.value = '';
-	textbox.focus();
-	var newItem = {title: itemText, quantity: 1};
-	notes.push(newItem);
-	displayList();
+	var textbox = document.getElementById('item');
+
+	if(notes.indexOf(textbox) !== -1){
+		alert("Value exists!")
+	}
+	else {
+		var itemText = textbox.value;
+		textbox.value = '';
+		textbox.focus();
+		var newItem = {title: itemText, quantity: 1};
+		notes.push(newItem);
+		displayList();
+	}
 }
 
 function displayList() {
@@ -29,5 +35,5 @@ function deleteIndex(i) {
 	displayList();
 }
 
-button = document.getElementById('add');
+var button = document.getElementById('add');
 button.onclick = addItem;
